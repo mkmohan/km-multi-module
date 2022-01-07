@@ -14,6 +14,7 @@ jobs:
           env: username=tomsmith,password=SuperSecretPassword!
           config: baseUrl=http://the-internet.herokuapp.com
           spec: cypress/integration/login.spec.js
+          project: ./e2e
 
 
 
