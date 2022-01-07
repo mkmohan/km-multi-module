@@ -1,0 +1,19 @@
+name: Cypress Tests
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run Cypress Tests
+        uses: cypress-io/github-action@v2
+        with:
+          env: username=tomsmith,password=SuperSecretPassword!
+          config: baseUrl=http://the-internet.herokuapp.com
+          spec: cypress/integration/login.spec.js
+
+
+
