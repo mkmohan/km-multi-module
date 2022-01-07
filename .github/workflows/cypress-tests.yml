@@ -11,10 +11,12 @@ jobs:
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v2
         with:
+          project: ./e2e
+          working-directory: ./e2e
           env: username=tomsmith,password=SuperSecretPassword!
           config: baseUrl=http://the-internet.herokuapp.com
           spec: cypress/integration/login.spec.js
-          project: ./e2e
+
 
 
 
